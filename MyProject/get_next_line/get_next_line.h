@@ -6,7 +6,7 @@
 /*   By: juyou <juyou@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 17:30:52 by juyou             #+#    #+#             */
-/*   Updated: 2021/05/05 18:15:31 by juyou            ###   ########.fr       */
+/*   Updated: 2021/05/06 12:46:15 by juyou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <limits.h>
-#include <stdio.h> //EDFAWEFAWEF
 
 # ifndef BUFFER_SIZE
-#	define BUFFER_SIZE 5000
+#	define BUFFER_SIZE 256
 # endif
 
 int		get_next_line(int fd, char **line);
