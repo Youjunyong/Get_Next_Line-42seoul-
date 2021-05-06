@@ -33,3 +33,8 @@ git clone https://github.com/charMstr/GNL_lover.git; cp get_next_line.h get_next
 ## gnu-war-mashine
 
 git clone https://github.com/C4r4c0l3/gnl-war-machine-v2019.git; cd gnl-war-machine-v2019; ./grademe.sh
+
+
+Norm체크
+<stdio.h>
+printf 체크
