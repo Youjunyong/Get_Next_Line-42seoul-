@@ -38,3 +38,7 @@ git clone https://github.com/C4r4c0l3/gnl-war-machine-v2019.git; cd gnl-war-mach
 Norm체크
 <stdio.h>
 printf 체크
+
+
+
+FREE(BUF)를 하게되면 line의 주소값을 담고있기 때문에 쓰레기갑싱 남게된다.

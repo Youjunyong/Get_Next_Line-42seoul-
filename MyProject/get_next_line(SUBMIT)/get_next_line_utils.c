@@ -6,18 +6,18 @@
 /*   By: juyou <juyou@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 17:41:10 by juyou             #+#    #+#             */
-/*   Updated: 2021/05/06 13:28:46 by juyou            ###   ########.fr       */
+/*   Updated: 2021/05/06 17:03:21 by juyou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+size_t		ft_strlen(const char *s)
 {
 	size_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	return (i);
 }
@@ -46,8 +46,7 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	return (src_len);
 }
 
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len;
@@ -66,12 +65,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (i + ft_strlen(src));
 }
 
-
-char	*ft_strjoin(char *s1, char *s2)
+char		*ft_strjoin(char *s1, char *s2)
 {
 	char	*strjoin;
 	int		s1_len;
-	int 	s2_len;
+	int		s2_len;
+
 	if (!(s1) && !(s2))
 		return (NULL);
 	else if (!(s1) || !(s2))
@@ -80,15 +79,15 @@ char	*ft_strjoin(char *s1, char *s2)
 	s2_len = ft_strlen(s2);
 	if (!(strjoin = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1))))
 		return (NULL);
-	ft_strlcpy(strjoin, s1, s1_len + 1 );
+	ft_strlcpy(strjoin, s1, s1_len + 1);
 	free(s1);
 	ft_strlcat(strjoin + (s1_len), s2, s2_len + 1);
 	return (strjoin);
 }
 
-char	*ft_strdup(char *s1)
+char		*ft_strdup(char *s1)
 {
-	char *ptr;
+	char	*ptr;
 	int		len;
 
 	len = ft_strlen(s1);

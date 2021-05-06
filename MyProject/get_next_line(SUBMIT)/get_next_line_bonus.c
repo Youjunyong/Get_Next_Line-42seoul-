@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juyou <juyou@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 17:02:54 by juyou             #+#    #+#             */
-/*   Updated: 2021/05/06 13:28:47 by juyou            ###   ########.fr       */
+/*   Updated: 2021/05/06 17:00:36 by juyou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	find_new_line(char *keep)
+int				find_new_line(char *keep)
 {
-	int	i;
-	
+	int			i;
+
 	i = 0;
 	while (keep[i])
 	{
@@ -26,15 +26,14 @@ int	find_new_line(char *keep)
 	return (-1);
 }
 
-int	split_line(char **keep, char **line, int target)
+int				split_line(char **keep, char **line, int target)
 {
-	char	*temp;
-	int		len;
-	
+	char		*temp;
+	int			len;
+
 	(*keep)[target] = '\0';
 	*line = ft_strdup(*keep);
 	len = ft_strlen(*keep + target + 1);
-	
 	if (len == 0)
 	{
 		free(*keep);
@@ -46,9 +45,10 @@ int	split_line(char **keep, char **line, int target)
 	*keep = temp;
 	return (1);
 }
-int					ret_EOF(char **keep, char **line)
+
+int				ret_eof(char **keep, char **line)
 {
-	int		target;
+	int			target;
 
 	if (*keep && (target = find_new_line(*keep)) >= 0)
 		return (split_line(keep, line, target));
@@ -62,8 +62,7 @@ int					ret_EOF(char **keep, char **line)
 	return (0);
 }
 
-
-int	get_next_line(int fd, char **line)
+int				get_next_line(int fd, char **line)
 {
 	static char	*keep[OPEN_MAX];
 	char		buf[BUFFER_SIZE + 1];
@@ -81,6 +80,5 @@ int	get_next_line(int fd, char **line)
 	}
 	if (read_size < 0)
 		return (-1);
-	return (ret_EOF(&keep[fd], line));
+	return (ret_eof(&keep[fd], line));
 }
-

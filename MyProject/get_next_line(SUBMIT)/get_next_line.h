@@ -6,20 +6,20 @@
 /*   By: juyou <juyou@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 17:30:52 by juyou             #+#    #+#             */
-/*   Updated: 2021/05/06 12:46:15 by juyou            ###   ########.fr       */
+/*   Updated: 2021/05/06 17:04:25 by juyou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <limits.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <limits.h>
 
 # ifndef BUFFER_SIZE
-#	define BUFFER_SIZE 256
+#  define BUFFER_SIZE 256
 # endif
 
 int		get_next_line(int fd, char **line);
