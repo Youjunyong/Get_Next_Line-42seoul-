@@ -6,11 +6,11 @@
 /*   By: juyou <juyou@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 17:02:54 by juyou             #+#    #+#             */
-/*   Updated: 2021/05/06 17:00:36 by juyou            ###   ########.fr       */
+/*   Updated: 2021/05/08 13:09:51 by juyou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int				find_new_line(char *keep)
 {
